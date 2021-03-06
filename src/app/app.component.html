@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" *ngIf="mostrarMenu">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['/home']">Hot<b>Mart</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"  routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/painel']">Painel</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/mercado']">Mercado</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/afiliado']">Afiliados</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a href="#" data-toggle="nav-link dropdown">
+          <img src="../assets/author/pablo-3x4.png" class="img_perfil_navbar">
+          <span class="ml-2 text-white-50">Pablo</span>
+        </a>
+      </form>
+    </div>
+
+  </div>
+</nav>
+
+<div class="wrapper">
+  <!-- SIDEBAR -->
+  <nav id="sidebar" *ngIf="mostrarMenu">
+    <div class="pt-5 text-center">
+      <img src="../assets/logo-50px.png" class="img_perfil_navbar mt-5">
+      <h3>AngularMart</h3>
+    </div>
+
+    <!-- PESQUISAR MENU NA NAVBAR -->
+    <div class="input-group container mt-4">
+      <input type="text" class="form-control" id="pesquisar_menu" placeholder="Pesquisar Menu" [formControl]="filter">
+    </div>
+
+    <!-- MENU -->
+    <ul class="components">
+      <div *ngFor="let menu of menus$ | async" >
+        <li routerLinkActive="active">
+          <a [routerLink]="[menu.rota]" [term]="filter.value">
+            <div class="row">
+              <div class="col-1">
+                <i class="material-icons md-18 icon-pt">{{menu.icon}}</i>
+              </div>
+              <div class="col-10">
+                {{menu.label}}
+              </div>
+            </div>
+          </a>
+        </li>
+      </div>
+    </ul>
+  </nav>
+</div>
+
+<div>
+  <div>
+    <router-outlet ></router-outlet>
+  </div>
+</div>

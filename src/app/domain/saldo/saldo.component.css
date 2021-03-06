@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+    .body-content {
+        padding-left: 260px;
+        padding-top: 65px;
+    }
+}
+
+@media (max-width: 768px) {
+    .body-content {
+        padding-left: 10px;
+        padding-top: 65px;
+    }
+}

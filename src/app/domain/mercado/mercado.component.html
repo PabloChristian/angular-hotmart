@@ -1,0 +1,43 @@
+<div class="body-content">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a [routerLink]="['/painel']">Painel</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mercado</li>
+        </ol>
+    </nav>
+
+    <div class="col-12">
+        <h1 class="mt-4">
+            Produtos para Afiliação
+        </h1>
+        <p class="mt-2">Escolha o melhor produto para afiliação...</p>
+
+        <div class="mt-1">
+            <input type="text" class="form-control" id="pesquisar_produto" placeholder="Pesquisar Produto"
+                [formControl]="filterProduto">
+        </div>
+        <hr>
+    </div>
+
+    <div class="row">
+        <div *ngFor="let produto of produto$ | async">
+            <div class="col-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{produto.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" [term]="filterProduto.name">{{produto.name}}</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <ngb-rating [(rate)]="currentRate" [readonly]="readonly">
+                            <ng-template let-fill="fill" let-index="index">
+                                <span class="star" [class.filled]="fill === 100" [class.bad]="index < 5">&#9733;</span>
+                            </ng-template>
+                        </ngb-rating>
+                        <a href="#" class="btn btn-primary">Afiliar-se agora!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

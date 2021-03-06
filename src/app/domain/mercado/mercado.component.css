@@ -1,0 +1,30 @@
+@media (min-width: 768px) {
+    .body-content {
+        padding-left: 260px;
+        padding-top: 65px;
+    }
+}
+
+@media (max-width: 768px) {
+    .body-content {
+        padding-left: 10px;
+        padding-top: 65px;
+    }
+}
+
+.star {
+    font-size: 1.5rem;
+    color: #b0c4de;
+}
+
+.filled {
+    color: #1e90ff;
+}
+
+.bad {
+    color: #deb0b0;
+}
+
+.filled.bad {
+    color: #ff1e1e;
+}

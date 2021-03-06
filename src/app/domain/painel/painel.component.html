@@ -1,0 +1,182 @@
+<div class="body-content ml-1">
+  <div class="jumbotron text-center">
+    <div class="alert alert-success" role="alert">
+      <h2>Bem-vindo <a href="/">Pablo</a>, se diverta com a melhor plataforma de afiliados!</h2>
+    </div>
+
+    <p class="lead">Para melhor experência com a plataforma, estamos em constante melhoria para entregar o melhor que
+      podemos.</p>
+    <hr class="my-4">
+    <p>Para ter sucesso, compartilhe seu produto para seus potenciais clientes.</p>
+    <a class="btn btn-success" [routerLink]="['/produto']" role="button">CRIE AGORA SEU PRODUTO</a>
+  </div>
+  <div class="row ">
+    <div class="col-xl-6">
+      <div class="jumbotron ml-1 jumbotron-height-550">
+        <div class="text-center">
+          <h3><b>SUAS COMISSÕES</b></h3>
+        </div>
+        <select class="custom-select custom-select-lg mb-3">
+          <option selected>Selecione o período</option>
+          <option value="1">7 Dias</option>
+          <option value="2">30 Dias</option>
+          <option value="4">365 Dias</option>
+        </select>
+        <hr>
+        <div class="row ">
+          <div class="col-12 pt-2 row">
+            <div class="col-7">
+              <h5><b>Quantidade de Vendas:</b></h5>
+              <p>Ontem: 25 Produto(s)</p>
+            </div>
+            <div class="col-5">
+              <h5>42 Produto(s)</h5>
+            </div>
+          </div>
+          <div class="col-12 pt-2 row">
+            <div class="col-7">
+              <h5><b>Valor Vendas:</b></h5>
+              <p>Ontem: 5.659,02 R$</p>
+            </div>
+            <div class="col-5">
+              <h5 class="text-success">10.652,05 R$</h5>
+            </div>
+          </div>
+          <div class="col-12 pt-2 row">
+            <div class="col-7">
+              <h5><b>Valor Comissão:</b></h5>
+              <p>Ontem: 3.262,56 R$</p>
+            </div>
+            <div class="col-5">
+              <h5 class="text-success">6.326,20 R$</h5>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="text-center">
+          <a class="btn btn-success" [routerLink]="['/saldo']" role="button">Solicitar Saque</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-6">
+      <div class="jumbotron ml-1 jumbotron-height-550">
+        <div class="text-center">
+          <h3><b>MÉTRICAS DE VENDAS</b></h3>
+        </div>
+        <select class="custom-select custom-select-lg mb-3">
+          <option selected>Selecionar o Produto</option>
+          <option value="1">1° Produto</option>
+          <option value="2">2° Produto</option>
+          <option value="4">3° Produto</option>
+        </select>
+        <hr>
+        <div class="row">
+          <div class="col-12 pt-2 row">
+            <div class="col-10">
+              <h5><b>Taxa de Conversão Geral:</b></h5>
+            </div>
+            <div class="col-2">
+              <h5> 0%</h5>
+            </div>
+          </div>
+          <div class="col-12 pt-2 row">
+            <div class="col-10">
+              <h5><b>Taxa de Conversão Cartão:</b></h5>
+            </div>
+            <div class="col-2">
+              <h5> 0%</h5>
+            </div>
+          </div>
+          <div class="col-12 pt-2 row">
+            <div class="col-10">
+              <h5><b>Taxa de Conversão Boleto:</b></h5>
+            </div>
+            <div class="col-2">
+              <h5> 0%</h5>
+            </div>
+          </div>
+          <div class="col-12 pt-2 row">
+            <div class="col-10">
+              <h5><b>Taxa de Abandonos:</b></h5>
+            </div>
+            <div class="col-2">
+              <h5> 0%</h5>
+            </div>
+          </div>
+          <div class="col-12 pt-2 row">
+            <div class="col-10">
+              <h5><b>Taxa de Cartão Cancelado:</b></h5>
+            </div>
+            <div class="col-2">
+              <h5> 0%</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-12">
+      <div class="jumbotron ml-1 jumbotron-height-550">
+        <div class="text-center">
+          <h3><b>PRODUTOS</b></h3>
+        </div>
+
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+              aria-selected="true">Produtor</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+              aria-selected="false">Co-Produtor</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+              aria-selected="false">Afiliado</a>
+          </li>
+        </ul>
+        <div class="tab-content mt-5" id="myTabContent">
+          <div class="tab-pane fade show active align-middle" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Produto</th>
+                  <th scope="col">Descrição</th>
+                  <th scope="col">Valor</th>
+                  <th scope="col">Ação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Fone de Ouvido</td>
+                  <td>Descrição - Teste teste teste..</td>
+                  <td>52,50 R$</td>
+                  <td><a href="" class="btn btn-sm btn-primary"><i class="material-icons md-18 icon-pt">visibility</i></a></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Playstation 4</td>
+                  <td>Descrição - Teste teste teste..</td>
+                  <td>1.800,00 R$</td>
+                  <td><a href="" class="btn btn-sm btn-primary"><i class="material-icons md-18 icon-pt">visibility</i></a></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Controle</td>
+                  <td>Descrição - Teste teste teste..</td>
+                  <td>250,00 R$</td>
+                  <td><a href="" class="btn btn-sm btn-primary"><i class="material-icons md-18 icon-pt">visibility</i></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

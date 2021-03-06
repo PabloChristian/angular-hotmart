@@ -1,0 +1,43 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="text-center">Seja Bem-Vindo!</h1>
+    </div>
+</div>
+<div class="container">
+    <form [formGroup]="usuarioForm">
+        <div class="form-group">
+            <label for="Nome">Nome Completo: <small class="text-danger">*</small></label>
+            <input formControlName="nomeCompleto" type="email" class="form-control" id="nomeCompleto" maxlength="50" placeholder="Digite o nome completo...">
+            <ap-vmessage *ngIf="usuarioForm.get('nomeCompleto').errors?.required" text="Nome Completo é obrigatorio!"></ap-vmessage>
+        </div>
+        <div class="form-group">
+            <label for="Nome">E-mail: <small class="text-danger">*</small></label>
+            <input formControlName="email" type="email" class="form-control" id="email" maxlength="50" placeholder="nome@exemplo.com">
+            <ap-vmessage *ngIf="usuarioForm.get('email').errors?.required" text="E-mail é obrigatorio!"></ap-vmessage>
+        </div>
+        <div class="form-group">
+            <label for="Nome">CPF/CNPJ: <small class="text-danger">*</small></label>
+            <input formControlName="documento" type="email" class="form-control" id="documento" maxlength="14" placeholder="000.000.000-00">
+            <ap-vmessage *ngIf="usuarioForm.get('documento').errors?.required" text="CPF/CNPJ é obrigatorio!"></ap-vmessage>
+        </div>
+        <div class="form-group">
+            <label for="Nome">Data de Nascimento: <small class="text-danger">*</small></label>
+            <input formControlName="dataDeNascimento" type="email" class="form-control" id="dataDeNascimento" maxlength="8" placeholder="dd/mm/aaaa">
+            <ap-vmessage *ngIf="usuarioForm.get('dataDeNascimento').errors?.required" text="Data de Nascimento é obrigatorio!"></ap-vmessage>
+        </div>
+        <div class="form-group">
+            <label for="Nome">Senha: <small class="text-danger">*</small></label>
+            <input formControlName="senha" type="email" class="form-control" id="senha" maxlength="20" placeholder="Digite uma Senha">
+            <ap-vmessage *ngIf="usuarioForm.get('senha').errors?.required" text="Senha é obrigatorio!"></ap-vmessage>
+        </div>
+        <div class="form-group">
+            <label for="Nome">Confirmar Senha: <small class="text-danger">*</small></label>
+            <input formControlName="confirmarSenha" type="email" class="form-control" id="confirmarSenha" maxlength="20" placeholder="Confirme sua Senha">
+            <ap-vmessage *ngIf="usuarioForm.get('confirmarSenha').errors?.required" text="Confirmar senha é obrigatorio!"></ap-vmessage>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary" [routerLink]="['/login']">Já tenho cadastro!</button>
+            <button class="ml-2 btn btn-success">Cadastrar</button>
+        </div>
+    </form>
+</div>

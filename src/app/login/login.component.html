@@ -1,0 +1,36 @@
+<div class="container-login">
+    <div class="box-login pb-4 pt-4">
+        <form [formGroup]="loginForm" class="container login-layout">
+            <div class="text-center">
+                <img src="../assets/logo-50px.png">
+                <h3 class="text-white">Login</h3>
+            </div>
+
+            <div class="form-group input-group-lg mt-5" [ngClass]="{'has-error': formFields.email.touched}">
+                <input #emailInput class="form-control input-border" type="email" id="email" formControlName="email" maxlength="50" placeholder="E-mail">
+                <div *ngIf="formFields.email.touched">
+                    <ap-vmessage *ngIf="loginForm.get('email').errors?.required" text="E-mail é obrigatorio!">
+                    </ap-vmessage>
+                </div>
+                <small *ngIf="!formFields.email.errors" id="emailHelp" class="form-text text-white">Nós não
+                    compartilharemos seu e-mail com ninguém.
+                </small>
+            </div>
+            <div class="form-group input-group-lg  mt-4" [ngClass]="{'has-error': formFields.password.touched}">
+                <input class="form-control input-border" type="password" id="password" formControlName="password" placeholder="Senha">
+                <div *ngIf="formFields.password.touched">
+                    <ap-vmessage *ngIf="loginForm.get('password').errors?.required" text="Senha é obrigatório!">
+                    </ap-vmessage>
+                </div>
+            </div>
+            <p class="text-white text-center"><a [routerLink]="['/usuario']">Esqueceu sua senha?</a></p>
+            <div class="text-center mt-2">
+                <button class="btn btn-success btn-login btn-lg col-12"
+                    (click)="realizarLogin(loginForm.value)">ENTRAR</button>
+                <p class="text-white mt-4">Ainda não tem uma conta?
+                    <a [routerLink]="['/usuario']">Crie agora!</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
