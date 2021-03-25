@@ -2,7 +2,15 @@
 
 Plataforma similar ao Hotmart, o qual o vendedor anuncia um produto e o afiliado realiza a divulgação/venda do produto e adquire comissão.
 
-Feito em Angular 10, usando Angular Material, Forms, Routing e RxJs.
+## Tecnologias
+
+* Angular 10.
+* Angular Material.
+* Angular Forms.
+* Angular Routing.
+* Angular RxJs.
+
+## Imagens
 
 - ## Página de Login
 
